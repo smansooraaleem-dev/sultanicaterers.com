@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sultani Caterers - Your One-Stop Solution for Grand Celebrations!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .header {
+            background-color: #8B0000; /* Dark Red */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 3em;
+            letter-spacing: 2px;
+        }
+        .header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+        .contact-info {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        .contact-info a {
+            color: white; /* Ensure links in contact bar are white */
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        /* STYLES FOR BOOKING BUTTON */
+        .booking-bar {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .booking-button {
+            display: inline-block;
+            background-color: #FFD700; /* Gold/Yellow for high visibility */
+            color: #8B0000; /* Dark Red text */
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.5em;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .booking-button:hover {
+            background-color: #e6c300;
+        }
+        
+        /* STYLES FOR QR CODE SECTION */
+        .qr-section {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: white;
+        }
+        .qr-section h2 {
+            color: #8B0000;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        .qr-container {
+            border: 2px solid #8B0000;
+            display: inline-block;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+        .qr-container img {
+            width: 200px; /* Adjust size as needed */
+            height: 200px;
+            display: block;
+            margin: 0 auto 10px;
+            border: 1px solid #ccc;
+        }
+        
+        /* NEW CSS FOR VCF DOWNLOAD BUTTON */
+        .qr-section .vcf-download-button {
+            display: block; /* Make the download button full width inside the container */
+            margin: 15px auto 0;
+            max-width: 300px; /* Control the width */
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            font-weight: normal;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .qr-section .vcf-download-button:hover {
+            background-color: #45a049;
+        }
+        /* END NEW CSS */
+
+
+        .services-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .services-section h2 {
+            color: #8B0000;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: calc(33% - 40px); /* Adjust for 3 columns */
+            min-width: 280px;
+            text-align: left;
+            box-sizing: border-box;
+        }
+        .service-card h3 {
+            color: #8B0000;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+        .service-card h3 svg {
+            margin-right: 10px;
+            color: #4CAF50;
+        }
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0;
+        }
+        .service-card ul li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        .why-choose-us {
+            background-color: #333;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .why-choose-us h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+        .why-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .advantages, .owners-info {
+            flex: 1;
+            min-width: 300px;
+            text-align: left;
+        }
+        .advantages ul {
+            list-style: none;
+            padding: 0;
+        }
+        .advantages ul li {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+        }
+        .advantages ul li svg {
+            margin-right: 10px;
+            color: #4CAF50;
+        }
+        .owners-info p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        .owners-info strong {
+            display: block;
+            font-size: 1.2em;
+            margin-top: 5px;
+        }
+        .footer {
+            background-color: #8B0000;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+        @media (max-width: 768px) {
+            .service-card {
+                width: calc(50% - 40px);
+            }
+        }
+        @media (max-width: 480px) {
+            .service-card {
+                width: 100%;
+            }
+            .header h1 {
+                font-size: 2.2em;
+            }
+            .header p {
+                font-size: 1em;
+            }
+            .contact-info a {
+                display: block;
+                margin: 5px 0;
+            }
+            .why-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1><i class="fas fa-star"></i> SULTANI CATERERS <i class="fas fa-star"></i></h1>
+        <p>Your One-Stop Solution for Grand Celebrations!</p>
+    </div>
+
+    <div class="contact-info">
+        <a href="tel:+919133451470"><i class="fas fa-phone"></i> 91334 51470</a>
+        <a href="tel:+919676094967"><i class="fas fa-phone"></i> 96760 94967</a>
+        <a href="tel:+918185025528"><i class="fas fa-phone"></i> 81850 25528</a>
+        <span><i class="fas fa-map-marker-alt"></i> Hyderabad</span>
+    </div>
+
+    <div class="booking-bar">
+        <a href="https://wa.me/919133451470?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20catering%20and%20event%20packages." class="booking-button" target="_blank">
+            <i class="fab fa-whatsapp"></i> BOOK ON WHATSAPP NOW!
+        </a>
+    </div>
+    
+    <div class="qr-section">
+        <h2>Scan to Save All Contact Details</h2>
+        <div class="qr-container">
+            <img src="qr_code_image.png" alt="QR Code for Sultani Caterers Contact VCF">
+            <p>Scan to instantly save all three key contact numbers to your phone!</p>
+            
+            <a href="sultani_caterers.vcf" download class="vcf-download-button">
+                <i class="fas fa-download"></i> Download Contact Card (VCF)
+            </a>
+        </div>
+    </div>
+    <div class="services-section">
+        <h2>OUR SERVICES</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <h3><i class="fas fa-utensils"></i> CATERING SERVICES</h3>
+                <ul>
+                    <li>Veg & Non-Veg Multi Cuisine</li>
+                    <li>Traditional, Mughal & Hyderabadi Dishes</li>
+                    <li>Buffet, Live Counters & Customized Menus</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-video"></i> VIDEOGRAPHER</h3>
+                <ul>
+                    <li>HD & Drone Coverage</li>
+                    <li>Pre-Wedding Shoots</li>
+                    <li>Event Highlights & Social Media Reels</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-ring"></i> WEDDING PLANNER</h3>
+                <ul>
+                    <li>Complete Wedding Coordination</li>
+                    <li>Venue Selection & Theme Planning</li>
+                    <li>Guest Management & Hospitality</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-paint-brush"></i> MEHNDI ARTIST</h3>
+                <ul>
+                    <li>Professional Organic Mehndi Designs</li>
+                    <li>Bridal, Engagement & Party Mehndi</li>
+                    <li>Custom & Modern Patterns</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-chair"></i> DECORATION & MEHNDI EVENTS</h3>
+                <ul>
+                    <li>Stage, Mandap & Floral Designs</li>
+                    <li>Lighting, Backdrops & Balloon Decor</li>
+                    <li>Themed Birthdays</li>
+                    <li>Mehndi & Sangeet</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-spa"></i> MAKEUP BY SANIA</h3>
+                <ul>
+                    <li>Bridal & Party Makeup</li>
+                    <li>HD & Waterproof Makeup</li>
+                    <li>Natural & Glam Looks</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-cut"></i> HAIRSTYLIST SERVICES</h3>
+                <ul>
+                    <li>Bridal Hairstyles</li>
+                    <li>Party & Event Styling</li>
+                    <li>Trendy & Elegant Looks</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="why-choose-us">
+        <h2>WHY CHOOSE US?</h2>
+        <div class="why-container">
+            <div class="advantages">
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Professional Team</li>
+                    <li><i class="fas fa-check-circle"></i> Affordable Packages</li>
+                    <li><i class="fas fa-check-circle"></i> On-Time Service</li>
+                    <li><i class="fas fa-check-circle"></i> Memorable Experience Guaranteed</li>
+                </ul>
+            </div>
+            <div class="owners-info">
+                <p>Owners:</p>
+                <strong>NOOR MOHAMMED ALEEM</strong>
+                <strong>SYED MANSOOR AHMED ALEEM</strong>
+                <strong>MOHAMMED NOMAN FAHAD</strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Call Now for Bookings & Packages!</p>
+    </div>
+
+</body>
+</html>

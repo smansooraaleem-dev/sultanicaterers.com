@@ -1,0 +1,13 @@
+<div class="qr-section">
+    <h2>Scan to Save All Contact Details</h2>
+    <div class="qr-container">
+        <img src="qr_code_image.png" alt="QR Code for Sultani Caterers Contact VCF">
+        <p>
+            Scan to instantly save all three key contact numbers to your phone!
+        </p>
+        <a href="sultani_caterers.vcf" download class="booking-button" 
+           style="background-color: #4CAF50; color: white; padding: 10px 20px; font-size: 1.1em; margin-top: 15px;">
+            <i class="fas fa-download"></i> Download Contact (VCF)
+        </a>
+    </div>
+</div>
